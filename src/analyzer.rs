@@ -1,4 +1,4 @@
-use backend::AnalyzerBackend;
+use backend::{AnalyzerBackend, TargetFunction};
 
 pub mod backend;
 
@@ -15,5 +15,7 @@ impl<T: AnalyzerBackend> Analyzer<T> {
         self.backend.analyze()
     }
 
-    pub fn export(&self) {}
+    pub fn export(&self) -> Vec<TargetFunction> {
+        self.backend.export()
+    }
 }

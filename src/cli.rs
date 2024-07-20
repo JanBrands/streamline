@@ -15,8 +15,12 @@ pub struct StreamlineOptions {
 pub enum StreamlineCommands {
     /// Analyze firmware for potentially vulnerable target locations
     Analyze {
+        /// Path to the firmware to analyze
         #[arg(short, long, value_name = "FILE")]
         firmware: PathBuf,
+        /// Path to a YAML file with sensitive functions
+        #[arg(short, long, value_name = "FILE")]
+        sensitive_functions: PathBuf,
     },
 
     /// Emulate and fuzz firmware

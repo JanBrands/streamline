@@ -1,0 +1,16 @@
+# This is an example file defining sensitive functions for the Analyzer component of streamline.
+# The first column defines the name of the sensitive function, the second column the corresponding weight.
+
+# This set of functions was provided by https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8990098.
+strcpy: 1
+strcat: 1
+read: 1
+scanf: 1
+gets: 1
+sprintf: 1
+system: 1
+execve: 1
+getenv: 1
+
+# Custom set of functions
+memcpy: 1
